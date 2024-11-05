@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([12682015.338693, -12701.377687, 12683003.686753, -11971.506547], map.getSize());
+map.getView().fit([12682034.703853, -12605.690826, 12683023.051913, -11875.819707], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -437,7 +437,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-right-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">WebGIS DBK</h2>';
+        titleElement.innerHTML = '<h2 class="project-title"><img src="images/dbk_logo.png" height="auto" width="75">WebGIS DBK</h2>';
         return titleElement;
     })(),
     target: 'top-right-container'
