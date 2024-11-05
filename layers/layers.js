@@ -196,7 +196,8 @@ maxResolution:2.8004466152261966,
     <img src="styles/legend/202411_survei_pohon_12_7.png" /> Meranti Kuning<br />\
     <img src="styles/legend/202411_survei_pohon_12_8.png" /> Meranti Merah<br />\
     <img src="styles/legend/202411_survei_pohon_12_9.png" /> Meranti Putih<br />\
-    <img src="styles/legend/202411_survei_pohon_12_10.png" /> Nyatoh<br />'
+    <img src="styles/legend/202411_survei_pohon_12_10.png" /> Nyatoh<br />\
+    <img src="styles/legend/202411_survei_pohon_12_11.png" /> Meranti<br />'
         });
 var group_PotensiCadanganKayu = new ol.layer.Group({
                                 layers: [lyr_202411_survei_pohon_12,],
