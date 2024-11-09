@@ -201,6 +201,35 @@ maxResolution:2.8004466152261966,
     <img src="styles/legend/202411_survei_pohon_12_10.png" /> Nyatoh<br />\
     <img src="styles/legend/202411_survei_pohon_12_11.png" /> Meranti<br />'
         });
+var format_BoundaryProgressClearing_13 = new ol.format.GeoJSON();
+var features_BoundaryProgressClearing_13 = format_BoundaryProgressClearing_13.readFeatures(json_BoundaryProgressClearing_13, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_BoundaryProgressClearing_13 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_BoundaryProgressClearing_13.addFeatures(features_BoundaryProgressClearing_13);
+var lyr_BoundaryProgressClearing_13 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_BoundaryProgressClearing_13,
+maxResolution:2.8004466152261966,
+ 
+                style: style_BoundaryProgressClearing_13,
+                popuplayertitle: "Boundary Progress Clearing",
+                interactive: true,
+    title: 'Boundary Progress Clearing<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_0.png" /> ACCESS TO BM<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_1.png" /> CAMP AND OFFICE<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_2.png" /> DOCKING AREA<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_3.png" /> HAULING ROAD<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_4.png" /> JETTY AREA<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_5.png" /> LAYDOWN AREA<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_6.png" /> TEMPORARY MAGAZINE AREA<br />\
+    <img src="styles/legend/BoundaryProgressClearing_13_7.png" /> <br />'
+        });
+var group_Progress = new ol.layer.Group({
+                                layers: [lyr_BoundaryProgressClearing_13,],
+                                fold: "open",
+                                title: "Progress"});
 var group_PotensiCadanganKayu = new ol.layer.Group({
                                 layers: [lyr_202411_survei_pohon_12,],
                                 fold: "open",
@@ -218,8 +247,8 @@ var group_Imagery = new ol.layer.Group({
                                 fold: "open",
                                 title: "Imagery"});
 
-lyr_ESRISatellite_0.setVisible(false);lyr_HereWegoSatellite_1.setVisible(true);lyr_DroneDBK_2.setVisible(true);lyr_IUP_OP_BI_3.setVisible(true);lyr_IUP_OP_DBK_4.setVisible(true);lyr_IPPKH_PIT_DBK_5.setVisible(true);lyr_Koridor_Jalan_FINAL_942012_rev_18_10_2012_6.setVisible(true);lyr_SaranaPrasaranaIPPKHDBKPolygon_7.setVisible(true);lyr_Lahan_Trase_Jalan_Muara_Laung_Belum_Bebas_8.setVisible(true);lyr_Lahan_Trase_Jalan_Muara_Laung_Sudah_Bebas_9.setVisible(true);lyr_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10.setVisible(true);lyr_Lahan_Trase_Jalan_Ampar_Sudah_Bebas_11.setVisible(true);lyr_202411_survei_pohon_12.setVisible(true);
-var layersList = [group_Imagery,group_IPPKH,group_BatasLahan,group_PotensiCadanganKayu];
+lyr_ESRISatellite_0.setVisible(false);lyr_HereWegoSatellite_1.setVisible(true);lyr_DroneDBK_2.setVisible(true);lyr_IUP_OP_BI_3.setVisible(true);lyr_IUP_OP_DBK_4.setVisible(true);lyr_IPPKH_PIT_DBK_5.setVisible(true);lyr_Koridor_Jalan_FINAL_942012_rev_18_10_2012_6.setVisible(true);lyr_SaranaPrasaranaIPPKHDBKPolygon_7.setVisible(true);lyr_Lahan_Trase_Jalan_Muara_Laung_Belum_Bebas_8.setVisible(true);lyr_Lahan_Trase_Jalan_Muara_Laung_Sudah_Bebas_9.setVisible(true);lyr_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10.setVisible(true);lyr_Lahan_Trase_Jalan_Ampar_Sudah_Bebas_11.setVisible(true);lyr_202411_survei_pohon_12.setVisible(true);lyr_BoundaryProgressClearing_13.setVisible(true);
+var layersList = [group_Imagery,group_IPPKH,group_BatasLahan,group_PotensiCadanganKayu,group_Progress];
 lyr_IUP_OP_BI_3.set('fieldAliases', {'LAYER': 'LAYER', 'Perusahaan': 'Perusahaan', 'Luas': 'Luas', 'No_SK': 'No_SK', 'Status_Izi': 'Status_Izi', });
 lyr_IUP_OP_DBK_4.set('fieldAliases', {'LAYER': 'LAYER', 'Perusahaan': 'Perusahaan', 'Luas': 'Luas', 'No_SK': 'No_SK', 'Status_Izi': 'Status_Izi', });
 lyr_IPPKH_PIT_DBK_5.set('fieldAliases', {'LAYER': 'LAYER', 'Id': 'Id', });
@@ -230,6 +259,7 @@ lyr_Lahan_Trase_Jalan_Muara_Laung_Sudah_Bebas_9.set('fieldAliases', {'LAYER': 'L
 lyr_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10.set('fieldAliases', {'LAYER': 'LAYER', 'OBJECTID': 'OBJECTID', 'No_Pendata': 'No_Pendata', 'Pemilik': 'Pemilik', 'Luas_Dig': 'Luas_Dig', 'Luas_Text': 'Luas_Text', 'Prog_Lap': 'Prog_Lap', 'Prog_Acc': 'Prog_Acc', 'Ket_Lap': 'Ket_Lap', 'Ket_Acc': 'Ket_Acc', 'Stat_Lah_C': 'Stat_Lah_C', 'Prog_Lah_C': 'Prog_Lah_C', 'Status_Lhn': 'Status_Lhn', 'Kecamatan': 'Kecamatan', 'Peruntukan': 'Peruntukan', 'Nomor_BA': 'Nomor_BA', 'Reconcile': 'Reconcile', 'Keterangan': 'Keterangan', 'Bts_Area': 'Bts_Area', 'Note_Lap': 'Note_Lap', 'Segment': 'Segment', 'NoU': 'NoU', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', 'Foto_Pemil': 'Foto_Pemil', 'Ket_DJR': 'Ket_DJR', });
 lyr_Lahan_Trase_Jalan_Ampar_Sudah_Bebas_11.set('fieldAliases', {'LAYER': 'LAYER', 'OBJECTID': 'OBJECTID', 'No_Pendata': 'No_Pendata', 'Pemilik': 'Pemilik', 'Luas_Dig': 'Luas_Dig', 'Luas_Text': 'Luas_Text', 'Prog_Lap': 'Prog_Lap', 'Prog_Acc': 'Prog_Acc', 'Ket_Lap': 'Ket_Lap', 'Ket_Acc': 'Ket_Acc', 'Stat_Lah_C': 'Stat_Lah_C', 'Prog_Lah_C': 'Prog_Lah_C', 'Status_Lhn': 'Status_Lhn', 'Kecamatan': 'Kecamatan', 'Peruntukan': 'Peruntukan', 'Nomor_BA': 'Nomor_BA', 'Reconcile': 'Reconcile', 'Keterangan': 'Keterangan', 'Bts_Area': 'Bts_Area', 'Note_Lap': 'Note_Lap', 'Segment': 'Segment', 'NoU': 'NoU', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', 'Foto_Pemil': 'Foto_Pemil', 'Ket_DJR': 'Ket_DJR', });
 lyr_202411_survei_pohon_12.set('fieldAliases', {'no': 'no', 'nomor_bc': 'nomor_bc', 'jenis_poho': 'jenis_poho', 'diameter': 'diameter', 'tinggi': 'tinggi', 'volume': 'volume', 'img': 'img', });
+lyr_BoundaryProgressClearing_13.set('fieldAliases', {'NO': 'NO', 'NAME': 'NAME', 'DATE': 'DATE', 'AREA': 'AREA', });
 lyr_IUP_OP_BI_3.set('fieldImages', {'LAYER': 'TextEdit', 'Perusahaan': 'TextEdit', 'Luas': 'TextEdit', 'No_SK': 'TextEdit', 'Status_Izi': 'TextEdit', });
 lyr_IUP_OP_DBK_4.set('fieldImages', {'LAYER': 'TextEdit', 'Perusahaan': 'TextEdit', 'Luas': 'TextEdit', 'No_SK': 'TextEdit', 'Status_Izi': 'TextEdit', });
 lyr_IPPKH_PIT_DBK_5.set('fieldImages', {'LAYER': 'TextEdit', 'Id': 'Range', });
@@ -240,6 +270,7 @@ lyr_Lahan_Trase_Jalan_Muara_Laung_Sudah_Bebas_9.set('fieldImages', {'LAYER': 'Te
 lyr_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10.set('fieldImages', {'LAYER': 'TextEdit', 'OBJECTID': 'Range', 'No_Pendata': 'TextEdit', 'Pemilik': 'TextEdit', 'Luas_Dig': 'TextEdit', 'Luas_Text': 'TextEdit', 'Prog_Lap': 'TextEdit', 'Prog_Acc': 'TextEdit', 'Ket_Lap': 'TextEdit', 'Ket_Acc': 'TextEdit', 'Stat_Lah_C': 'TextEdit', 'Prog_Lah_C': 'TextEdit', 'Status_Lhn': 'TextEdit', 'Kecamatan': 'TextEdit', 'Peruntukan': 'TextEdit', 'Nomor_BA': 'TextEdit', 'Reconcile': 'TextEdit', 'Keterangan': 'TextEdit', 'Bts_Area': 'TextEdit', 'Note_Lap': 'TextEdit', 'Segment': 'TextEdit', 'NoU': 'Range', 'Shape_Leng': 'TextEdit', 'Shape_Area': 'TextEdit', 'Foto_Pemil': 'TextEdit', 'Ket_DJR': 'TextEdit', });
 lyr_Lahan_Trase_Jalan_Ampar_Sudah_Bebas_11.set('fieldImages', {'LAYER': 'TextEdit', 'OBJECTID': 'Range', 'No_Pendata': 'TextEdit', 'Pemilik': 'TextEdit', 'Luas_Dig': 'TextEdit', 'Luas_Text': 'TextEdit', 'Prog_Lap': 'TextEdit', 'Prog_Acc': 'TextEdit', 'Ket_Lap': 'TextEdit', 'Ket_Acc': 'TextEdit', 'Stat_Lah_C': 'TextEdit', 'Prog_Lah_C': 'TextEdit', 'Status_Lhn': 'TextEdit', 'Kecamatan': 'TextEdit', 'Peruntukan': 'TextEdit', 'Nomor_BA': 'TextEdit', 'Reconcile': 'TextEdit', 'Keterangan': 'TextEdit', 'Bts_Area': 'TextEdit', 'Note_Lap': 'TextEdit', 'Segment': 'TextEdit', 'NoU': 'Range', 'Shape_Leng': 'TextEdit', 'Shape_Area': 'TextEdit', 'Foto_Pemil': 'TextEdit', 'Ket_DJR': 'TextEdit', });
 lyr_202411_survei_pohon_12.set('fieldImages', {'no': 'TextEdit', 'nomor_bc': 'TextEdit', 'jenis_poho': 'TextEdit', 'diameter': 'TextEdit', 'tinggi': 'TextEdit', 'volume': 'TextEdit', 'img': 'ExternalResource', });
+lyr_BoundaryProgressClearing_13.set('fieldImages', {'NO': 'TextEdit', 'NAME': 'TextEdit', 'DATE': 'TextEdit', 'AREA': '', });
 lyr_IUP_OP_BI_3.set('fieldLabels', {'LAYER': 'inline label - always visible', 'Perusahaan': 'inline label - always visible', 'Luas': 'inline label - always visible', 'No_SK': 'inline label - always visible', 'Status_Izi': 'inline label - always visible', });
 lyr_IUP_OP_DBK_4.set('fieldLabels', {'LAYER': 'inline label - always visible', 'Perusahaan': 'inline label - always visible', 'Luas': 'inline label - always visible', 'No_SK': 'inline label - always visible', 'Status_Izi': 'inline label - always visible', });
 lyr_IPPKH_PIT_DBK_5.set('fieldLabels', {'LAYER': 'inline label - always visible', 'Id': 'inline label - always visible', });
@@ -250,6 +281,7 @@ lyr_Lahan_Trase_Jalan_Muara_Laung_Sudah_Bebas_9.set('fieldLabels', {'LAYER': 'in
 lyr_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10.set('fieldLabels', {'LAYER': 'inline label - always visible', 'OBJECTID': 'inline label - always visible', 'No_Pendata': 'inline label - always visible', 'Pemilik': 'inline label - always visible', 'Luas_Dig': 'inline label - always visible', 'Luas_Text': 'inline label - always visible', 'Prog_Lap': 'inline label - always visible', 'Prog_Acc': 'inline label - always visible', 'Ket_Lap': 'inline label - always visible', 'Ket_Acc': 'inline label - always visible', 'Stat_Lah_C': 'inline label - always visible', 'Prog_Lah_C': 'inline label - always visible', 'Status_Lhn': 'inline label - always visible', 'Kecamatan': 'inline label - always visible', 'Peruntukan': 'inline label - always visible', 'Nomor_BA': 'inline label - always visible', 'Reconcile': 'inline label - always visible', 'Keterangan': 'inline label - always visible', 'Bts_Area': 'inline label - always visible', 'Note_Lap': 'inline label - always visible', 'Segment': 'inline label - always visible', 'NoU': 'inline label - always visible', 'Shape_Leng': 'inline label - always visible', 'Shape_Area': 'inline label - always visible', 'Foto_Pemil': 'inline label - always visible', 'Ket_DJR': 'inline label - always visible', });
 lyr_Lahan_Trase_Jalan_Ampar_Sudah_Bebas_11.set('fieldLabels', {'LAYER': 'inline label - always visible', 'OBJECTID': 'inline label - always visible', 'No_Pendata': 'inline label - always visible', 'Pemilik': 'inline label - always visible', 'Luas_Dig': 'inline label - always visible', 'Luas_Text': 'inline label - always visible', 'Prog_Lap': 'inline label - always visible', 'Prog_Acc': 'inline label - always visible', 'Ket_Lap': 'inline label - always visible', 'Ket_Acc': 'inline label - always visible', 'Stat_Lah_C': 'inline label - always visible', 'Prog_Lah_C': 'inline label - always visible', 'Status_Lhn': 'inline label - always visible', 'Kecamatan': 'inline label - always visible', 'Peruntukan': 'inline label - always visible', 'Nomor_BA': 'inline label - always visible', 'Reconcile': 'inline label - always visible', 'Keterangan': 'inline label - always visible', 'Bts_Area': 'inline label - always visible', 'Note_Lap': 'inline label - always visible', 'Segment': 'inline label - always visible', 'NoU': 'inline label - always visible', 'Shape_Leng': 'inline label - always visible', 'Shape_Area': 'inline label - always visible', 'Foto_Pemil': 'inline label - always visible', 'Ket_DJR': 'inline label - always visible', });
 lyr_202411_survei_pohon_12.set('fieldLabels', {'no': 'inline label - always visible', 'nomor_bc': 'inline label - always visible', 'jenis_poho': 'inline label - always visible', 'diameter': 'inline label - always visible', 'tinggi': 'inline label - always visible', 'volume': 'inline label - always visible', 'img': 'hidden field', });
-lyr_202411_survei_pohon_12.on('precompose', function(evt) {
+lyr_BoundaryProgressClearing_13.set('fieldLabels', {'NO': 'inline label - always visible', 'NAME': 'inline label - always visible', 'DATE': 'inline label - always visible', 'AREA': 'inline label - always visible', });
+lyr_BoundaryProgressClearing_13.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
