@@ -1,6 +1,6 @@
 var size = 0;
 var placement = 'point';
-function categories_BoundaryProgressClearing_12(feature, value, size, resolution, labelText,
+function categories_BoundaryProgressClearing_13(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
@@ -69,7 +69,7 @@ default:
     })];
                     break;}};
 
-var style_BoundaryProgressClearing_12 = function(feature, resolution){
+var style_BoundaryProgressClearing_13 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -89,7 +89,7 @@ var style_BoundaryProgressClearing_12 = function(feature, resolution){
         labelText = String(feature.get("NAME"));
     }
     
-var style = categories_BoundaryProgressClearing_12(feature, value, size, resolution, labelText,
+var style = categories_BoundaryProgressClearing_13(feature, value, size, resolution, labelText,
                           labelFont, labelFill, bufferColor,
                           bufferWidth, placement);
 

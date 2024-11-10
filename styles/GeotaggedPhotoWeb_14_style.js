@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_GeotaggedPhotoWeb_13 = function(feature, resolution){
+var style_GeotaggedPhotoWeb_14 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -31,8 +31,8 @@ var style_GeotaggedPhotoWeb_13 = function(feature, resolution){
         size = 2*(Math.log(size)/ Math.log(2))
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 8.8 + size, points: 4,
-            angle: Math.PI/4, stroke: new ol.style.Stroke({color: 'rgba(248,54,87,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(255,1,238,0.9803921568627451)'})}),
+        image: new ol.style.RegularShape({radius: 16.0 + size, points: 4,
+            stroke: new ol.style.Stroke({color: 'rgba(255,37,99,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(248,24,203,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

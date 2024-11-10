@@ -1,6 +1,6 @@
 var size = 0;
 var placement = 'point';
-function categories_202411_survei_pohon_11(feature, value, size, resolution, labelText,
+function categories_202411_survei_pohon_12(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
@@ -113,7 +113,7 @@ case 'Meranti':
     })];
                     break;}};
 
-var style_202411_survei_pohon_11 = function(feature, resolution){
+var style_202411_survei_pohon_12 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -133,7 +133,7 @@ var style_202411_survei_pohon_11 = function(feature, resolution){
         labelText = String(feature.get("no"));
     }
     
-var style = categories_202411_survei_pohon_11(feature, value, size, resolution, labelText,
+var style = categories_202411_survei_pohon_12(feature, value, size, resolution, labelText,
                           labelFont, labelFill, bufferColor,
                           bufferWidth, placement);
 
