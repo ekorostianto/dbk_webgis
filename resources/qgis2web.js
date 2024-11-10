@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([12680649.013101, -15960.269333, 12681667.525834, -15208.121473], map.getSize());
+map.getView().fit([12680621.072594, -15953.969587, 12681721.010551, -15141.691113], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -838,6 +838,16 @@ if (elementToMove && parentElement) {
 
 
 //geocoder
+
+var geocoder = new Geocoder('nominatim', {
+  provider: 'osm',
+  lang: 'en-US',
+  placeholder: 'Search place or address ...',
+  limit: 5,
+  keepOpen: true,
+});
+map.addControl(geocoder);
+document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 
 //layer search
