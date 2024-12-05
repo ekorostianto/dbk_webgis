@@ -8,8 +8,26 @@ var map = new ol.Map({
     })
 });
 
+// Define AOI Extents
+const aoiExtents = {
+    area1: [113.8919064549999973,-0.1512878020000000,113.9511643849999984,-0.1084255390000000], // [minX, minY, maxX, maxY]
+    area2: [114.0565929010000019,-0.3768741750000000,114.0714073829999933,-0.3661586100000000],
+};
+
+// Zoom to selected AOI
+function zoomToAOI() {
+    const selectedAOI = document.getElementById('aoiDropdown').value;
+    if (selectedAOI && aoiExtents[selectedAOI]) {
+        const extent = aoiExtents[selectedAOI];
+        // Transform to EPSG:3857 (Web Mercator projection)
+        const transformedExtent = ol.proj.transformExtent(extent, 'EPSG:4326', 'EPSG:3857');
+        // Zoom to the extent
+        map.getView().fit(transformedExtent, { duration: 1000 });
+    }
+}
+
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([12680428.117296, -14761.589769, 12683726.398550, -12375.881742], map.getSize());
+map.getView().fit([12680400.699302, -15740.786782, 12682132.296983, -14488.289374], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -433,17 +451,6 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //title
 
-var Title = new ol.control.Control({
-    element: (() => {
-        var titleElement = document.createElement('div');
-        titleElement.className = 'top-right-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title"><img src="images/dbk_logo.png" height="auto" width="75">WebGIS DBK</h2>';
-        return titleElement;
-    })(),
-    target: 'top-right-container'
-});
-map.addControl(Title)
-    
 //abstract
 
 

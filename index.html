@@ -6,6 +6,8 @@
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css" />
         <link rel="stylesheet" href="./resources/ol.css">
         <link rel="stylesheet" href="resources/fontawesome-all.min.css">
         <link href="resources/ol-geocoder.min.css" rel="stylesheet">
@@ -46,12 +48,35 @@
         <title>WebGIS DBK</title>
     </head>
     <body>
-        <div id="map">
-            <div id="popup" class="ol-popup">
-                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                <div id="popup-content"></div>
+        <nav class="uk-background-primary uk-container uk-margin uk-light uk-position-top uk-position-z-index" uk-navbar="mode: click">
+            <div class="uk-navbar-left">              
+                <a class="uk-navbar-item uk-logo" href="/"><img width="75" height="auto" src="images/dbk_logo_transparent.png"/>DBK WebGIS</a>
             </div>
-        </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+                    <li>
+                        <select class="uk-select" id="aoiDropdown" onchange="zoomToAOI()">
+                            <option value="" disabled selected>Pilih AOI</option>
+                            <option value="area1">Camp B Joloi</option>
+                            <option value="area2">Ampar</option>
+                        </select>
+                    </li>
+                </ul>   
+                <a class="uk-navbar-toggle uk-hidden@s" href="#offcanvas-slide" uk-navbar-toggle-icon="" uk-toggle=""></a>  
+            </div>
+        </nav>
+        <section class="uk-section uk-height-1-1 uk-width-1-1 uk-padding-remove-bottom">
+            <div id="map">
+                <div id="popup" class="ol-popup">
+                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                    <div id="popup-content">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
         <script src="resources/qgis2web_expressions.js"></script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
