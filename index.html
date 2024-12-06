@@ -48,12 +48,12 @@
         <title>WebGIS DBK</title>
     </head>
     <body>
-        <nav class="uk-background-primary uk-container uk-margin uk-light uk-position-top uk-position-z-index" uk-navbar="mode: click">
+        <nav class="uk-background-primary uk-navbarcontainer uk-navbar" uk-navbar>
             <div class="uk-navbar-left">              
                 <a class="uk-navbar-item uk-logo" href="/"><img width="75" height="auto" src="images/dbk_logo_transparent.png"/>DBK WebGIS</a>
             </div>
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav uk-visible@s">
+                <ul class="uk-navbar-nav">
                     <li>
                         <select class="uk-select" id="aoiDropdown" onchange="zoomToAOI()">
                             <option value="" disabled selected>Pilih AOI</option>
@@ -61,11 +61,10 @@
                             <option value="area2">Ampar</option>
                         </select>
                     </li>
-                </ul>   
-                <a class="uk-navbar-toggle uk-hidden@s" href="#offcanvas-slide" uk-navbar-toggle-icon="" uk-toggle=""></a>  
+                </ul>
             </div>
         </nav>
-        <section class="uk-section uk-height-1-1 uk-width-1-1 uk-padding-remove-bottom">
+        <section class="uk-height-1-1">
             <div id="map">
                 <div id="popup" class="ol-popup">
                     <a href="#" id="popup-closer" class="ol-popup-closer"></a>
