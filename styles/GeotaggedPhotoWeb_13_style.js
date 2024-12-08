@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_GeotaggedPhotoWeb_12 = function(feature, resolution){
+var style_GeotaggedPhotoWeb_13 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}

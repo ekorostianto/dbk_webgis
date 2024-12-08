@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10 = function(feature, resolution){
+var style_Boundary_RKAB_DBK_2024_2025_16 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -21,7 +21,7 @@ var style_Lahan_Trase_Jalan_Ampar_Belum_Bebas_10 = function(feature, resolution)
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(228,26,28,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.6479999999999997}),
+        stroke: new ol.style.Stroke({color: 'rgba(251,154,153,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.6479999999999997}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

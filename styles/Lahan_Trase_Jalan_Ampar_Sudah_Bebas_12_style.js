@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Lahan_Trase_Jalan_Muara_Laung_Sudah_Bebas_9 = function(feature, resolution){
+var style_Lahan_Trase_Jalan_Ampar_Sudah_Bebas_12 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}

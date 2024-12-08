@@ -27,7 +27,7 @@ function zoomToAOI() {
 }
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([12680400.699302, -15740.786782, 12682132.296983, -14488.289374], map.getSize());
+map.getView().fit([12680711.342153, -15819.219062, 12681523.606166, -15231.693023], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
